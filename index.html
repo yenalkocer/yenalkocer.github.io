@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YenalDev — Unity Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">YENAL<span>DEV</span></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about" class="nav__link">Hakkımda</a></li>
+      <li><a href="#games" class="nav__link">Oyunlar</a></li>
+      <li><a href="#contact" class="nav__link">İletişim</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="canvas"></canvas>
+    <div class="hero__content reveal">
+      <span class="hero__badge">Unity Game Developer</span>
+      <h1 class="hero__name">YENAL<br><em>KOÇER</em></h1>
+      <p class="hero__sub" id="typewriter"></p>
+      <div class="hero__cta">
+        <a href="#games" class="btn btn--primary">Oyunlarımı Gör</a>
+        <a href="#contact" class="btn btn--ghost">İletişime Geç</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <b class="count" data-to="19">0</b>
+          <span>Planlı Oyun</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <b class="count" data-to="100">0</b><b>%</b>
+          <span>Araba Temalı</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <b class="count" data-to="3">0</b>
+          <span>Platform</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll">
+      <span>Keşfet</span>
+      <div class="hero__scroll-dot"></div>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// HAKKIMDA</span>
+        <h2>Kim Olduğum</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>Unity ile <strong>araba & yarış oyunları</strong> geliştirmeye odaklanmış bir game developer'ım. 2D arcade oyunlarından 3D simülasyonlara kadar geniş bir yelpazeye hakimim.</p>
+          <p>Her proje için temiz C# kodu, optimize edilmiş performans ve müşterinin istediği platforma (PC, Android, WebGL) çalışan build teslim ederim.</p>
+          <div class="skill-grid">
+            <span class="skill">Unity</span>
+            <span class="skill">C#</span>
+            <span class="skill">2D Fizik</span>
+            <span class="skill">3D Fizik</span>
+            <span class="skill">WheelCollider</span>
+            <span class="skill">Cinemachine</span>
+            <span class="skill">Object Pooling</span>
+            <span class="skill">AI Patika</span>
+            <span class="skill">Shader Graph</span>
+            <span class="skill">UI Toolkit</span>
+            <span class="skill">Mobil Build</span>
+            <span class="skill">WebGL Build</span>
+          </div>
+        </div>
+        <div class="about__cards">
+          <div class="feat reveal">
+            <div class="feat__icon">⚡</div>
+            <h3>Hızlı Teslimat</h3>
+            <p>Çalışan prototip 2–5 günde hazır</p>
+          </div>
+          <div class="feat reveal">
+            <div class="feat__icon">🏎️</div>
+            <h3>Uzman Odak</h3>
+            <p>Sadece araba & yarış oyunları</p>
+          </div>
+          <div class="feat reveal">
+            <div class="feat__icon">📱</div>
+            <h3>Çoklu Platform</h3>
+            <p>PC · Android · WebGL</p>
+          </div>
+          <div class="feat reveal">
+            <div class="feat__icon">📦</div>
+            <h3>Kaynak Kodu</h3>
+            <p>Temiz, anlaşılır C# projesi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section class="games" id="games">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// PORTFÖY</span>
+        <h2>Oyunlarım</h2>
+      </div>
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">Tümü</button>
+        <button class="filter" data-filter="arcade">Arcade</button>
+        <button class="filter" data-filter="racing">Yarış</button>
+        <button class="filter" data-filter="puzzle">Bulmaca</button>
+        <button class="filter" data-filter="simulation">Simülasyon</button>
+      </div>
+      <div class="games__grid" id="gamesGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// İLETİŞİM</span>
+        <h2>Birlikte Çalışalım</h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p class="contact__lead">Araba oyunu projeniz mi var?<br>Haydi konuşalım.</p>
+          <div class="contact__links">
+            <a href="mailto:yenalkocer06006@gmail.com" class="clink">
+              <span class="clink__icon">✉</span>
+              <div>
+                <small>E-Posta</small>
+                <span>yenalkocer06006@gmail.com</span>
+              </div>
+            </a>
+            <a href="#" class="clink">
+              <span class="clink__icon">💼</span>
+              <div>
+                <small>Freelance</small>
+                <span>Bionluk Profilim</span>
+              </div>
+            </a>
+            <a href="#" class="clink">
+              <span class="clink__icon">🐙</span>
+              <div>
+                <small>Kod</small>
+                <span>GitHub Profilim</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact__form reveal" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="Adınız" class="form-input" required>
+            <input type="email" placeholder="E-posta" class="form-input" required>
+          </div>
+          <input type="text" placeholder="Konu (örn: Araba Oyunu Siparişi)" class="form-input">
+          <textarea placeholder="Projenizi anlatın — bütçe, süre, platform..." class="form-input form-ta" required></textarea>
+          <button type="submit" class="btn btn--primary btn--wide">Mesaj Gönder →</button>
+          <p class="form-success" id="formSuccess">Mesajınız alındı, en kısa sürede döneceğim!</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__logo">YENAL<span>DEV</span></span>
+      <p>© 2026 — Unity Araba Oyunları Uzmanı</p>
+      <div class="footer__links">
+        <a href="mailto:yenalkocer06006@gmail.com">Mail</a>
+        <a href="#">Bionluk</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__box">
+      <button class="modal__close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
