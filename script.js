@@ -176,7 +176,7 @@ class Particle {
     const ty = this.y - Math.sin(this.angle) * trailLen;
 
     const grad = ctx.createLinearGradient(tx, ty, this.x, this.y);
-    const color = this.isAccent ? `rgba(249,115,22,${alpha})` : `rgba(255,255,255,${alpha})`;
+    const color = this.isAccent ? `rgba(220,38,38,${alpha})` : `rgba(255,255,255,${alpha})`;
     grad.addColorStop(0, 'transparent');
     grad.addColorStop(1, color);
 
@@ -207,11 +207,11 @@ window.addEventListener('resize', () => { resize(); initParticles(); });
 
 /* ==================== TYPEWRITER ==================== */
 const phrases = [
-  "Araba Oyunları Uzmanı",
-  "Unity C# Developer",
-  "Yarış Simülasyonu",
+  "Araba Temalı Oyunlar Stüdyosu",
+  "Unity ile Yarış & Simülasyon",
+  "1:64: Koleksiyoner Yapımcısı",
   "2D & 3D Game Dev",
-  "Freelance Geliştirici",
+  "Steam'de Yakında",
 ];
 let pi = 0, ci = 0, deleting = false;
 const tw = document.getElementById('typewriter');
@@ -304,7 +304,7 @@ function renderGames(filter) {
   const filtered = filter === 'all' ? GAMES : GAMES.filter(g => g.category === filter);
   grid.innerHTML = filtered.map((g, i) => `
     <div class="game-card" data-id="${g.id}" style="animation-delay:${i * 0.06}s">
-      <div class="game-card__thumb" style="background: linear-gradient(135deg, ${g.color}22, ${g.color}44)">
+      <div class="game-card__thumb" style="background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.12))">
         <span style="position:relative;z-index:1">${g.icon}</span>
       </div>
       <div class="game-card__body">
@@ -345,7 +345,7 @@ function openModal(id) {
   const g = GAMES.find(x => x.id === id);
   if (!g) return;
   modalContent.innerHTML = `
-    <div class="modal-thumb" style="background: linear-gradient(135deg, ${g.color}33, ${g.color}55)">
+    <div class="modal-thumb" style="background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.16))">
       <span>${g.icon}</span>
     </div>
     <div class="modal-body">
