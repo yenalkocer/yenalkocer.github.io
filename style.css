@@ -129,10 +129,12 @@ ul { list-style: none; }
   padding: 0 24px;
 }
 .hero__logo {
-  width: min(88%, 620px);
+  width: 100%;
+  max-width: 480px;
   height: auto;
   margin: 0 auto 28px;
   display: block;
+  object-fit: contain;
   filter: drop-shadow(0 0 40px rgba(220,38,38,0.25));
 }
 .hero__sub {
@@ -825,7 +827,7 @@ ul { list-style: none; }
   .form-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .hero__logo { width: 92%; }
+  .hero__logo { max-width: 340px; }
   .hero__cta { flex-direction: column; align-items: center; }
   .games__grid { grid-template-columns: 1fr; }
   .about__cards { grid-template-columns: 1fr; }
