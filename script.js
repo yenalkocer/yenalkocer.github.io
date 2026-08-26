@@ -8,11 +8,21 @@ const GAMES = [
     features: ["Object Pooling", "Hız artış sistemi", "En yüksek skor kaydı", "4 şerit trafik"],
   },
   {
-    id: 2, num: "02", title: "Parking Master", category: "puzzle",
-    icon: "🅿️", color: "#8b5cf6", status: "soon",
-    desc: "10 seviyeli 2D park etme bulmacası. Dar alanlarda hassas manevra.",
-    tags: ["2D", "Puzzle", "10 Seviye"],
-    features: ["2D Fizik", "Collider triggers", "Seviye sistemi", "Yıldız derecelendirme"],
+    id: 2, num: "02", title: "Park It", category: "simulation",
+    icon: "🅿️", color: "#3b82f6", status: "live",
+    image: "assets/parkit-kart.jpg",
+    cover: "assets/parkit-afis.jpg",
+    link: "https://realyenal.itch.io/park-it",
+    desc: "12 otoparklı park etme simülasyonu. Binek araçtan römorklu TIR'a, sağanaktan buz pistine — tarayıcıda ücretsiz oynanır.",
+    tags: ["3D", "Simülasyon", "12 Bölüm", "WebGL", "TR + EN"],
+    features: [
+      "12 otopark · 4 araç: binek, kamyonet, otobüs, TIR + römork",
+      "İki mod: Serbest ve Zaman Yarışı",
+      "Hasar sistemi — motor, fren ve direksiyon bozulur; tamir istasyonunda onarılır",
+      "Sağanak, buz pisti, gece vardiyası, katlı otopark, yaya trafiği",
+      "Her gün gece yarısı değişen 'günün görevi'",
+      "163 PlayMode testi · sıfır üçüncü taraf varlık, tüm içerik prosedürel üretim",
+    ],
   },
   {
     id: 3, num: "03", title: "Drag Race Tap", category: "arcade",
@@ -294,6 +304,7 @@ navLinks.querySelectorAll('a').forEach(a => {
 
 /* ==================== GAMES GRID ==================== */
 function statusLabel(s) {
+  if (s === 'live') return '<span class="badge badge--live">Yayında</span>';
   if (s === 'done') return '<span class="badge badge--done">Tamamlandı</span>';
   if (s === 'wip')  return '<span class="badge badge--wip">Yapım Aşamasında</span>';
   return '<span class="badge badge--soon">Çok Yakında</span>';
@@ -305,7 +316,9 @@ function renderGames(filter) {
   grid.innerHTML = filtered.map((g, i) => `
     <div class="game-card" data-id="${g.id}" style="animation-delay:${i * 0.06}s">
       <div class="game-card__thumb" style="background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.12))">
-        <span style="position:relative;z-index:1">${g.icon}</span>
+        ${g.image
+          ? `<img src="${g.image}" alt="${g.title}" class="game-card__img" loading="lazy">`
+          : `<span style="position:relative;z-index:1">${g.icon}</span>`}
       </div>
       <div class="game-card__body">
         <div class="game-card__meta">
@@ -345,8 +358,8 @@ function openModal(id) {
   const g = GAMES.find(x => x.id === id);
   if (!g) return;
   modalContent.innerHTML = `
-    <div class="modal-thumb" style="background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.16))">
-      <span>${g.icon}</span>
+    <div class="modal-thumb${g.cover ? ' modal-thumb--img' : ''}" style="background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.16))">
+      ${g.cover ? `<img src="${g.cover}" alt="${g.title}">` : `<span>${g.icon}</span>`}
     </div>
     <div class="modal-body">
       <div class="modal-meta">
@@ -362,9 +375,11 @@ function openModal(id) {
         <h4>Teknik Özellikler</h4>
         <ul>${g.features.map(f => `<li>${f}</li>`).join('')}</ul>
       </div>
-      ${g.status === 'done' || g.status === 'wip'
-        ? `<a href="#" class="btn btn--primary btn--wide">Oyunu Oyna →</a>`
-        : `<button class="btn btn--ghost btn--wide" disabled style="opacity:.4;cursor:not-allowed">Çok Yakında</button>`
+      ${g.link
+        ? `<a href="${g.link}" target="_blank" rel="noopener" class="btn btn--primary btn--wide">itch.io'da Ücretsiz Oyna →</a>`
+        : g.status === 'done' || g.status === 'wip'
+          ? `<a href="#" class="btn btn--primary btn--wide">Oyunu Oyna →</a>`
+          : `<button class="btn btn--ghost btn--wide" disabled style="opacity:.4;cursor:not-allowed">Çok Yakında</button>`
       }
     </div>
   `;
