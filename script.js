@@ -145,83 +145,70 @@ const GAMES = [
   },
 ];
 
-/* ==================== CANVAS ANIMATION ==================== */
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-let W, H, particles = [];
+/* ==================== KOLEKSİYONER GALERİ ==================== */
+const SHOTS = [
+  { id: "inceleme",  title: "İnceleme modu",  text: "Kartoneti eline al, döndür, yakınlaş. Her kusur pazarlıkta işine yarar.", big: true },
+  { id: "oyuncakci", title: "Oyuncakçı",      text: "Her şey mahallenin oyuncakçısında başlar; raflar her sabah yenilenir." },
+  { id: "pazarlik",  title: "Pazarlık",       text: "Her esnafın bir kişiliği var. Güveni artarsa fiyat iner, sabrı biterse kapı kapanır." },
+  { id: "pazar",     title: "Antika pazarı",  text: "Ucuz ama belirsiz: acemi tezgâhçı elindeki nadir parçanın değerini bilmeyebilir." },
+  { id: "cay",       title: "Çay ocağı",      text: "Çınar gölgesi, sokak kedileri, sarı taksiler." },
+  { id: "muze",      title: "Müzen",          text: "Satmak mı, sergilemek mi? Vitrinler doldukça müze kademen yükselir." },
+  { id: "atolye",    title: "Atölye",         text: "Hurdayı sök, zımparala, astarla, boya; aslına uygun ya da kendi renginle." },
+  { id: "sokak",     title: "Mahalle",        text: "13 mekân, yükleme ekranı yok; her yere yürüyerek gidiyorsun." },
+  { id: "hava",      title: "Kuşbakışı",      text: "Mahalle bir dekor değil, oyunun ekonomisi." },
+];
 
-function resize() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
+const gallery = document.getElementById('kolGallery');
+gallery.innerHTML = SHOTS.map((s, i) => `
+  <button class="shot reveal${s.big ? ' shot--big' : ''}" data-i="${i}" aria-label="${s.title}: büyüt">
+    <img src="assets/kol/g_${s.id}${s.big ? '' : '_k'}.jpg" alt="${s.title}: ${s.text}" loading="lazy">
+    <span>${s.title}</span>
+  </button>
+`).join('');
+
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+let lbIndex = 0;
+
+function showShot(i) {
+  lbIndex = (i + SHOTS.length) % SHOTS.length;
+  const s = SHOTS[lbIndex];
+  lbImg.src = `assets/kol/g_${s.id}.jpg`;
+  lbImg.alt = s.title;
+  lbCap.innerHTML = `<b>${s.title}</b>${s.text}`;
+}
+function openLightbox(i) {
+  showShot(i);
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lbClose').focus();
+}
+function closeLightbox() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
 }
 
-class Particle {
-  constructor() { this.reset(true); }
-  reset(initial) {
-    const spread = initial ? Math.random() : 0;
-    this.x = W / 2;
-    this.y = H / 2;
-    this.angle = Math.random() * Math.PI * 2;
-    this.dist = initial ? Math.random() * Math.max(W, H) * 0.7 : 0;
-    this.speed = Math.random() * 2.5 + 1;
-    this.len = Math.random() * 60 + 10;
-    this.opacity = Math.random() * 0.5 + 0.1;
-    this.isAccent = Math.random() > 0.85;
-    if (initial) {
-      this.x = W / 2 + Math.cos(this.angle) * this.dist;
-      this.y = H / 2 + Math.sin(this.angle) * this.dist;
-    }
-  }
-  update() {
-    this.dist += this.speed;
-    this.x = W / 2 + Math.cos(this.angle) * this.dist;
-    this.y = H / 2 + Math.sin(this.angle) * this.dist;
-    if (this.dist > Math.max(W, H) * 0.85) this.reset(false);
-  }
-  draw() {
-    const progress = this.dist / (Math.max(W, H) * 0.85);
-    const alpha = Math.min(progress * 3, 1) * this.opacity;
-    const trailLen = Math.min(progress * this.len, this.len);
-    const tx = this.x - Math.cos(this.angle) * trailLen;
-    const ty = this.y - Math.sin(this.angle) * trailLen;
-
-    const grad = ctx.createLinearGradient(tx, ty, this.x, this.y);
-    const color = this.isAccent ? `rgba(220,38,38,${alpha})` : `rgba(255,255,255,${alpha})`;
-    grad.addColorStop(0, 'transparent');
-    grad.addColorStop(1, color);
-
-    ctx.beginPath();
-    ctx.strokeStyle = grad;
-    ctx.lineWidth = this.isAccent ? 1.5 : 0.8;
-    ctx.moveTo(tx, ty);
-    ctx.lineTo(this.x, this.y);
-    ctx.stroke();
-  }
-}
-
-function initParticles() {
-  particles = Array.from({ length: 180 }, () => new Particle());
-}
-
-function animateCanvas() {
-  ctx.fillStyle = 'rgba(8,9,16,0.15)';
-  ctx.fillRect(0, 0, W, H);
-  particles.forEach(p => { p.update(); p.draw(); });
-  requestAnimationFrame(animateCanvas);
-}
-
-resize();
-initParticles();
-animateCanvas();
-window.addEventListener('resize', () => { resize(); initParticles(); });
+gallery.querySelectorAll('.shot').forEach(el => {
+  el.addEventListener('click', () => openLightbox(parseInt(el.dataset.i)));
+});
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', () => showShot(lbIndex - 1));
+document.getElementById('lbNext').addEventListener('click', () => showShot(lbIndex + 1));
+lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') showShot(lbIndex - 1);
+  if (e.key === 'ArrowRight') showShot(lbIndex + 1);
+});
 
 /* ==================== TYPEWRITER ==================== */
 const phrases = [
-  "Araba Temalı Oyunlar Stüdyosu",
-  "Unity ile Yarış & Simülasyon",
-  "1:64: Koleksiyoner Yapımcısı",
-  "2D & 3D Game Dev",
-  "Steam'de Yakında",
+  "Oyuncak arabalardan gerçek arabaya.",
+  "Rafı tara, kusuru gör, pazarlığını yap.",
+  "Bir İstanbul mahallesinde diecast avı.",
+  "Steam Erken Erişim · 2027 İlkbahar",
 ];
 let pi = 0, ci = 0, deleting = false;
 const tw = document.getElementById('typewriter');

@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yerle 1 — Araba Temalı Oyun Stüdyosu</title>
+  <title>Yerle 1 — 1:64 Koleksiyoner</title>
+  <meta name="description" content="Yerle 1 stüdyosunun bayrak oyunu 1:64 Koleksiyoner: bir İstanbul mahallesinde diecast koleksiyon ve al-sat oyunu. Steam Erken Erişim 2027.">
+  <meta property="og:title" content="1:64 Koleksiyoner — Yerle 1">
+  <meta property="og:description" content="Oyuncakçıdan antika pazarına: nadir model arabaları bul, pazarlık yap, koleksiyonunu büyüt.">
+  <meta property="og:image" content="https://yenalkocer.github.io/assets/kol/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Barlow+Condensed:ital,wght@0,700;1,700;1,800&family=Barlow:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +20,7 @@
     <a href="#hero" class="nav__logo"><img src="assets/logo-mark.png" alt="Yerle 1"></a>
     <ul class="nav__links" id="navLinks">
       <li><a href="#koleksiyoner" class="nav__link">Koleksiyoner</a></li>
+      <li><a href="#galeri" class="nav__link">Galeri</a></li>
       <li><a href="#about" class="nav__link">Stüdyo</a></li>
       <li><a href="#games" class="nav__link">Projeler</a></li>
       <li><a href="#contact" class="nav__link">İletişim</a></li>
@@ -25,35 +30,37 @@
     </button>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO — 1:64 KOLEKSİYONER -->
   <section class="hero" id="hero">
-    <canvas id="canvas"></canvas>
+    <div class="hero__bg"><img src="assets/kol/hero.jpg" alt="" fetchpriority="high"></div>
+    <div class="hero__shade"></div>
     <div class="hero__content reveal">
-      <img src="assets/logo-mark.png" alt="Yerle 1" class="hero__logo">
+      <span class="kol-kicker">Yerle 1 sunar</span>
+      <h1 class="hero__title"><img src="assets/kol/logo.webp" alt="1:64 Koleksiyoner" class="hero__game-logo"></h1>
       <p class="hero__sub" id="typewriter"></p>
       <div class="hero__cta">
-        <a href="#koleksiyoner" class="btn btn--primary">Koleksiyoner'i Keşfet</a>
-        <a href="#games" class="btn btn--ghost">Projelerimiz</a>
+        <a href="#koleksiyoner" class="btn btn--primary">Oyunu Keşfet</a>
+        <a href="#galeri" class="btn btn--ghost">Ekran Görüntüleri</a>
       </div>
       <div class="hero__stats">
         <div class="hero__stat">
-          <b class="count" data-to="19">0</b>
-          <span>Planlı Oyun</span>
+          <b class="count" data-to="13">0</b>
+          <span>Mekân</span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
-          <b class="count" data-to="100">0</b><b>%</b>
-          <span>Araba Temalı</span>
+          <b class="count" data-to="5">0</b>
+          <span>Nadirlik</span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
-          <b class="count" data-to="3">0</b>
-          <span>Platform</span>
+          <b class="count" data-to="12">0</b>
+          <span>Koleksiyoncu</span>
         </div>
         <div class="hero__stat-divider"></div>
         <div class="hero__stat">
-          <b class="count" data-to="1">0</b>
-          <span>Yayında</span>
+          <b>2027</b>
+          <span>Erken Erişim</span>
         </div>
       </div>
     </div>
@@ -63,36 +70,97 @@
     </a>
   </section>
 
+  <!-- KAYAN ŞERİT -->
+  <div class="kol-ticker" aria-hidden="true">
+    <div class="kol-ticker__track">
+      <span>Oyuncakçı</span><span>Antika Pazarı</span><span>AVM</span><span>Çay Ocağı</span><span>Velodrop</span><span>VELOSERT</span><span>Atölye</span><span>Tavan Arası</span><span>Müze</span>
+      <span>Oyuncakçı</span><span>Antika Pazarı</span><span>AVM</span><span>Çay Ocağı</span><span>Velodrop</span><span>VELOSERT</span><span>Atölye</span><span>Tavan Arası</span><span>Müze</span>
+    </div>
+  </div>
+
   <!-- FLAGSHIP: KOLEKSİYONER -->
   <section class="flagship" id="koleksiyoner">
     <div class="container">
       <div class="flagship__grid">
         <div class="flagship__info reveal">
           <span class="section-tag">// BAYRAK PROJE</span>
-          <h2 class="flagship__title">1:64<br><em>Koleksiyoner</em></h2>
-          <p class="flagship__desc">Model araba tutkusunu bir koleksiyoner &amp; al-sat simülatörüne dönüştürüyoruz. Oyuncakçıdan antika pazarına beş farklı mekanda pazarlık yap, nadir parçaları avla, birikimini büyüt — ve bir gün hayalindeki gerçek arabaya ulaş.</p>
+          <h2 class="flagship__title">Bir İstanbul<br><em>mahallesindeyiz.</em></h2>
+          <p class="flagship__desc">Oyuncakçının rafında, antika pazarının tezgâhında, AVM'nin bir köşesinde nadir bir model araba seni bekliyor. <strong>1:64 Koleksiyoner</strong> bir diecast koleksiyon ve al-sat oyunu: parçayı bul, kusurunu gör, pazarlığını yap, koleksiyonunu büyüt ve bir gün oyuncak arabalardan gerçek bir arabaya ulaş.</p>
           <ul class="flagship__features">
-            <li>Birinci şahıs pazarlık &amp; koleksiyon sistemi</li>
-            <li>5 mekan: Oyuncakçı, AVM, Kozmetik, Akaryakıt, Antika Pazarı</li>
-            <li>VELOCAST marka evreni — 5 nadirlik kademesi</li>
-            <li>Kendi dükkanını aç, kendi işini kur</li>
+            <li>13 mekân, yükleme ekranı yok: her yere yürüyerek gidiyorsun</li>
+            <li>Kişiliği olan esnafla birinci şahıs pazarlık</li>
+            <li>VELOCAST marka evreni, 5 nadirlik kademesi</li>
+            <li>Atölyede restorasyon, VELOSERT'te derecelendirme, kendi müzen</li>
+            <li>Kör paket heyecanı, kumarın tuzağı olmadan: oranlar camda yazılı, gerçek para yok</li>
           </ul>
           <div class="flagship__meta">
-            <span class="badge badge--flagship">Steam Erken Erişim — 15-17 Aralık 2026</span>
+            <span class="badge badge--flagship">Steam Erken Erişim · 2027 İlkbahar</span>
           </div>
           <div class="flagship__cta">
-            <button class="btn btn--ghost" disabled>Steam Sayfası Yakında</button>
+            <button class="btn btn--ghost" disabled>Steam Sayfası Çok Yakında</button>
           </div>
         </div>
         <div class="flagship__visual reveal">
-          <div class="flagship__scale">
-            <span class="flagship__scale-num">1:64</span>
-            <span class="flagship__scale-label">Diecast Koleksiyon Simülatörü</span>
+          <div class="kol-fan" aria-label="VELOCAST kartonetleri">
+            <img src="assets/kol/kart_AE-01.webp" alt="Kızıl Şimşek 69 kartoneti" class="kol-fan__card kol-fan__card--l" loading="lazy">
+            <img src="assets/kol/kart_GY-04.webp" alt="Neon Gölge RX kartoneti" class="kol-fan__card kol-fan__card--r" loading="lazy">
+            <img src="assets/kol/kart_AE-06.webp" alt="Alev Yeleli Fastback kartoneti" class="kol-fan__card kol-fan__card--c" loading="lazy">
           </div>
         </div>
       </div>
+
+      <!-- DÖNGÜ -->
+      <div class="kol-block">
+        <div class="kol-head reveal">
+          <span class="kol-strip">Oyun döngüsü</span>
+          <h3 class="kol-h">Oyuncaktan <em>gerçek arabaya</em></h3>
+        </div>
+        <ol class="kol-loop">
+          <li class="reveal"><b>01</b><h4>Bul</h4><p>Raflar her sabah yenilenir. Antika pazarı, kör paket otomatı, kapıda beliren gezici satıcı, bir de "rahmetli babamın tavan arası" ilanları.</p></li>
+          <li class="reveal"><b>02</b><h4>İncele</h4><p>Parçayı eline al, döndür, yakınlaş. Ezik köşe, sararmış blister, soluk baskı… Gördüğün her kusur pazarlıkta işine yarar.</p></li>
+          <li class="reveal"><b>03</b><h4>Pazarlık</h4><p>Kimi esnaf samimi sohbeti sever, kimi sert pazarlığı. Güveni artarsa fiyat iner, sabrı biterse kapı kapanır.</p></li>
+          <li class="reveal"><b>04</b><h4>Sat ya da sergile</h4><p>Doğru parçayı doğru yere sat ya da vitrine koy. Müzen büyüdükçe pirinç levha, spot ışıklar, kadife bariyer gelir.</p></li>
+          <li class="reveal"><b>05</b><h4>Hedef</h4><p>Önce ekonomik bir araba, sonra spor, klasik ve süper araba. Oyuncak koleksiyonundan gerçek garaja.</p></li>
+        </ol>
+      </div>
+
+      <!-- NADİRLİK -->
+      <div class="kol-block">
+        <div class="kol-head reveal">
+          <span class="kol-strip">VELOCAST</span>
+          <h3 class="kol-h">Aynı raf, <em>40 kat fark</em></h3>
+          <p class="kol-lead">Rafta aynı görünen iki kartonetin değeri 40 kat farklı olabilir. Nadir olanı kartonetteki küçük işaretlerden tanırsın; kimse sana söylemez.</p>
+        </div>
+        <div class="kol-rarity">
+          <figure class="rar reveal" style="--rc:#bec4ce"><img src="assets/kol/kart_AE-01.webp" alt="Standard kademede kartonet" loading="lazy"><figcaption><span>Standard</span><b>×1</b></figcaption></figure>
+          <figure class="rar reveal" style="--rc:#c8cdd7"><img src="assets/kol/kart_AE-06.webp" alt="Prestige kademede kartonet" loading="lazy"><figcaption><span>Prestige</span><b>×2,5</b></figcaption></figure>
+          <figure class="rar reveal" style="--rc:#ff8c3c"><img src="assets/kol/kart_GY-04.webp" alt="Ember Cast kademede kartonet" loading="lazy"><figcaption><span>Ember Cast</span><b>×12</b></figcaption></figure>
+          <figure class="rar reveal" style="--rc:#78aaff"><img src="assets/kol/kart_RV-09.webp" alt="Vault Edition kademede kartonet" loading="lazy"><figcaption><span>Vault Edition</span><b>×25</b></figcaption></figure>
+          <figure class="rar reveal" style="--rc:#bea0ff"><img src="assets/kol/kart_AE-10.webp" alt="Ghost Print kademede kartonet" loading="lazy"><figcaption><span>Ghost Print</span><b>×40+</b></figcaption></figure>
+        </div>
+      </div>
+
+      <!-- GALERİ -->
+      <div class="kol-block" id="galeri">
+        <div class="kol-head reveal">
+          <span class="kol-strip">Oyundan kareler</span>
+          <h3 class="kol-h">Mahalle bir dekor değil, <em>oyunun ekonomisi</em></h3>
+        </div>
+        <div class="kol-gallery" id="kolGallery"></div>
+      </div>
     </div>
   </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Ekran görüntüsü">
+    <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Kapat">✕</button>
+    <button class="lightbox__btn lightbox__prev" id="lbPrev" aria-label="Önceki">‹</button>
+    <figure class="lightbox__fig">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__next" id="lbNext" aria-label="Sonraki">›</button>
+  </div>
 
   <!-- ABOUT / STÜDYO -->
   <section class="about" id="about">
