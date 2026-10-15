@@ -23,6 +23,7 @@
       <li><a href="#galeri" class="nav__link">Galeri</a></li>
       <li><a href="#about" class="nav__link">Stüdyo</a></li>
       <li><a href="#games" class="nav__link">Projeler</a></li>
+      <li><a href="siparis.html" class="nav__link">Oyun Yaptır</a></li>
       <li><a href="#contact" class="nav__link">İletişim</a></li>
     </ul>
     <button class="nav__burger" id="burger" aria-label="Menü">
@@ -232,6 +233,18 @@
     </div>
   </section>
 
+  <!-- OYUN SİPARİŞİ TANITIMI -->
+  <section class="order-band" id="siparis">
+    <div class="container order-band__inner reveal">
+      <div>
+        <span class="kol-strip">Yeni · Oyun siparişi</span>
+        <h2 class="kol-h">Hayalindeki oyunu <em>birlikte yapalım</em></h2>
+        <p class="kol-lead">Hediye oyun, marka ve etkinlik oyunu, prototip ya da tam oyun. Fikrini anlat, 48 saat içinde teklif gelsin.</p>
+      </div>
+      <a href="siparis.html" class="btn btn--primary">Teklif Al →</a>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
@@ -241,7 +254,8 @@
       </div>
       <div class="contact__grid">
         <div class="contact__info reveal">
-          <p class="contact__lead">Araba oyunu projeniz mi var?<br>Haydi konuşalım.</p>
+          <p class="contact__lead">Bir sorunuz mu var?<br>Haydi konuşalım.</p>
+          <a href="siparis.html" class="btn btn--ghost contact__order">Oyun siparişi formu →</a>
           <div class="contact__links">
             <a href="mailto:yenalkocer06006@gmail.com" class="clink">
               <span class="clink__icon">✉</span>
@@ -268,13 +282,13 @@
         </div>
         <form class="contact__form reveal" id="contactForm">
           <div class="form-row">
-            <input type="text" placeholder="Adınız" class="form-input" required>
-            <input type="email" placeholder="E-posta" class="form-input" required>
+            <input type="text" name="ad" placeholder="Adınız" class="form-input" required>
+            <input type="email" name="eposta" placeholder="E-posta" class="form-input" required>
           </div>
-          <input type="text" placeholder="Konu (örn: Araba Oyunu Siparişi)" class="form-input">
-          <textarea placeholder="Projenizi anlatın — bütçe, süre, platform..." class="form-input form-ta" required></textarea>
+          <input type="text" name="konu" placeholder="Konu" class="form-input">
+          <textarea name="mesaj" placeholder="Mesajınız" class="form-input form-ta" required></textarea>
           <button type="submit" class="btn btn--primary btn--wide">Mesaj Gönder →</button>
-          <p class="form-success" id="formSuccess">Mesajınız alındı, en kısa sürede döneceğim!</p>
+          <p class="form-success" id="formSuccess">E-posta uygulamanız açıldı; göndermek için Gönder'e basın. Açılmadıysa yenalkocer06006@gmail.com adresine yazın.</p>
         </form>
       </div>
     </div>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oyun Yaptır — Yerle 1</title>
+  <meta name="description" content="Hayalindeki oyunu Yerle 1'e yaptır: hediye oyun, marka ve etkinlik oyunu, prototip ya da tam oyun. Fikrini anlat, teklif al.">
+  <meta property="og:title" content="Hayalindeki oyunu birlikte yapalım — Yerle 1">
+  <meta property="og:description" content="Hediye oyundan marka oyununa, prototipten tam oyuna. Fikrini anlat, 48 saat içinde teklif al.">
+  <meta property="og:image" content="https://yenalkocer.github.io/assets/kol/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Barlow+Condensed:ital,wght@0,700;1,700;1,800&family=Barlow:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="siparis.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo"><img src="assets/logo-mark.png" alt="Yerle 1"></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#kimler" class="nav__link">Kimler İçin</a></li>
+      <li><a href="#paketler" class="nav__link">Paketler</a></li>
+      <li><a href="#surec" class="nav__link">Süreç</a></li>
+      <li><a href="#sss" class="nav__link">SSS</a></li>
+      <li><a href="index.html" class="nav__link">Stüdyo</a></li>
+      <li><a href="#teklif" class="nav__link sp-navcta">Teklif Al</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="sp-hero">
+    <div class="sp-hero__bg" aria-hidden="true"></div>
+    <div class="container sp-hero__grid">
+      <div class="sp-hero__text reveal">
+        <span class="kol-kicker">Yerle 1 · Oyun Siparişi</span>
+        <h1 class="sp-hero__title">Hayalindeki oyunu<br><em>birlikte yapalım.</em></h1>
+        <p class="sp-hero__sub">Kafandaki fikri anlat, gerisini biz düşünelim. Sevdiğine hediye bir oyun, markan için bir reklam oyunu ya da yıllardır hayalini kurduğun proje… Fikirden oynanabilir oyuna kadar her adımda yanındayız.</p>
+        <div class="sp-hero__cta">
+          <a href="#teklif" class="btn btn--primary">Teklif Al →</a>
+          <a href="#paketler" class="btn btn--ghost">Paketleri Gör</a>
+        </div>
+        <ul class="sp-hero__proof">
+          <li><b>48 saat</b><span>içinde teklif</span></li>
+          <li><b>Ayda 2</b><span>proje kabul ediyoruz</span></li>
+          <li><b>Ücretsiz</b><span>ilk görüşme</span></li>
+        </ul>
+      </div>
+
+      <!-- Canlı fikir kartı: formu doldurdukça kendini kurar -->
+      <div class="sp-hero__card reveal" aria-hidden="true">
+        <div class="idea" id="ideaHero">
+          <div class="idea__top">
+            <span class="idea__tag">Fikir kartı</span>
+            <span class="idea__num">#001</span>
+          </div>
+          <div class="idea__screen">
+            <div class="idea__road"></div>
+            <div class="idea__car"></div>
+            <div class="idea__star idea__star--1">★</div>
+            <div class="idea__star idea__star--2">★</div>
+            <div class="idea__star idea__star--3">★</div>
+          </div>
+          <h3 class="idea__title" id="heroIdeaTitle">Babamın Taksisi</h3>
+          <p class="idea__line" id="heroIdeaLine">Babamın 30 yıllık taksisiyle İstanbul'da müşteri kaptığım, doğum gününde hediye edeceğim mini oyun.</p>
+          <div class="idea__chips" id="heroIdeaChips"><span>Hediye</span><span>Telefon</span><span>Arcade</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- KAYAN ŞERİT -->
+  <div class="kol-ticker" aria-hidden="true">
+    <div class="kol-ticker__track">
+      <span>Hediye oyun</span><span>Marka oyunu</span><span>Etkinlik oyunu</span><span>Prototip</span><span>Oyun tasarımı</span><span>Tarayıcı oyunu</span><span>Mobil</span><span>PC</span>
+      <span>Hediye oyun</span><span>Marka oyunu</span><span>Etkinlik oyunu</span><span>Prototip</span><span>Oyun tasarımı</span><span>Tarayıcı oyunu</span><span>Mobil</span><span>PC</span>
+    </div>
+  </div>
+
+  <!-- KİMLER İÇİN -->
+  <section class="sp-sec" id="kimler">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Kimler için</span>
+        <h2 class="kol-h">Bir fikrin varsa <em>yeterli</em></h2>
+        <p class="kol-lead">Kod bilmen, çizim yapman, oyun dünyasını tanıman gerekmiyor. Ne istediğini kendi cümlelerinle anlatman yeter; onu oyun diline biz çeviririz.</p>
+      </div>
+      <div class="sp-who">
+        <article class="who reveal">
+          <div class="who__icon">🎁</div>
+          <h3>Kişisel</h3>
+          <p>Sevgiline, çocuğuna, arkadaşına ya da kendine özel bir oyun. İsimler, fotoğraflar, iç şakalar, ortak anılar oyunun içinde.</p>
+          <ul>
+            <li>Doğum günü ve yıldönümü sürprizi</li>
+            <li>Evlilik teklifi oyunu</li>
+            <li>Düğün ve davet oyunu (QR ile açılır)</li>
+            <li>Çocuğun çizdiği karakterle oyun</li>
+          </ul>
+        </article>
+        <article class="who reveal">
+          <div class="who__icon">🏢</div>
+          <h3>Marka ve ajans</h3>
+          <p>Ürününü anlatan, paylaşılan, akılda kalan oyunlar. Kampanya sayfası, fuar standı ya da sosyal medya için.</p>
+          <ul>
+            <li>Reklam ve kampanya oyunu</li>
+            <li>Fuar ve etkinlik standı oyunu</li>
+            <li>Skor tablolu yarışma ve çekiliş oyunu</li>
+            <li>Eğitim ve tanıtım simülasyonu</li>
+          </ul>
+        </article>
+        <article class="who reveal">
+          <div class="who__icon">🚀</div>
+          <h3>Girişimci ve içerik üreticisi</h3>
+          <p>Büyük bir oyun fikrin var ama nereden başlayacağını bilmiyorsun. Önce tasarlayıp sonra oynanabilir bir prototiple sınayalım.</p>
+          <ul>
+            <li>Oyun tasarım dokümanı (GDD)</li>
+            <li>Yatırımcı ve yayıncı demosu</li>
+            <li>Kanalın ya da karakterin için oyun</li>
+            <li>Steam ve mobil için tam oyun</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAKETLER -->
+  <section class="sp-sec sp-sec--alt" id="paketler">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Paketler</span>
+        <h2 class="kol-h">Fikre göre <em>dört yol</em></h2>
+        <p class="kol-lead">Fiyatlar tahminidir; kesin rakam fikrini dinledikten sonra yazılı teklifle gelir. Hangisinin sana uyduğundan emin değilsen formda "Bilmiyorum, siz önerin" seç.</p>
+      </div>
+      <div class="sp-packs" id="packs"></div>
+      <p class="sp-note reveal">Tüm paketlerde: ücretsiz ilk görüşme · yazılı teklif ve takvim · haftalık ilerleme videosu · teslimden sonra 30 gün hata düzeltme.</p>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM SERİSİ -->
+  <section class="sp-sec" id="takipci">
+    <div class="container">
+      <div class="sp-insta reveal">
+        <div class="sp-insta__text">
+          <span class="kol-strip">Instagram serisi</span>
+          <h2 class="kol-h">Takipçimin istediği <em>oyunu yapıyorum</em></h2>
+          <p class="kol-lead">Her hafta takipçilerden gelen fikirlerden birini seçiyor, bir günde oynanabilir hâle getiriyor ve bütün süreci videoya çekiyoruz. Fikrin seçilirse oyun ücretsiz, video da senin adınla yayınlanır.</p>
+          <ul class="sp-insta__rules">
+            <li>Fikir kısa ve tek cümleyle anlatılabilir olmalı</li>
+            <li>Seçilen fikir bir günlük kapsama indirilir: tek mekanik, tek ekran</li>
+            <li>Oyun tarayıcıda oynanır, bağlantısı sana gönderilir</li>
+          </ul>
+          <div class="sp-insta__cta">
+            <a href="#teklif" class="btn btn--primary" data-pick-kim="instagram">Fikrimi Gönder →</a>
+            <a href="#" class="btn btn--ghost" id="instaLink" target="_blank" rel="noopener" hidden>Instagram'da Takip Et</a>
+          </div>
+        </div>
+        <div class="sp-insta__phone" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__bar"><span class="phone__dot"></span>yerle1</div>
+              <div class="phone__video">
+                <span class="phone__ep">BÖLÜM 07</span>
+                <b>“Kedim uzaya gitsin”</b>
+                <small>@takipçi fikri · 1 günde yapıldı</small>
+              </div>
+              <div class="phone__acts"><span>♥</span><span>💬</span><span>➤</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÜREÇ -->
+  <section class="sp-sec sp-sec--alt" id="surec">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Süreç</span>
+        <h2 class="kol-h">Fikirden <em>oyuna</em></h2>
+      </div>
+      <ol class="kol-loop">
+        <li class="reveal"><b>01</b><h4>Anlat</h4><p>Aşağıdaki formu doldur. Kısa bir cümle bile yeter; eksiklerini birlikte tamamlarız.</p></li>
+        <li class="reveal"><b>02</b><h4>Görüşme</h4><p>48 saat içinde dönüyoruz. 20 dakikalık ücretsiz görüşmede fikri netleştiriyoruz.</p></li>
+        <li class="reveal"><b>03</b><h4>Teklif</h4><p>Kapsam, fiyat ve takvim yazılı gelir. Onaylarsan ilk ödemeyle başlıyoruz.</p></li>
+        <li class="reveal"><b>04</b><h4>Yapım</h4><p>Her hafta oynanabilir bir sürüm ve kısa bir video. Yön değiştirmek istersen erken söylersin.</p></li>
+        <li class="reveal"><b>05</b><h4>Teslim</h4><p>Oyun, bağlantısı ya da dosyaları sende. 30 gün boyunca çıkan hataları ücretsiz düzeltiyoruz.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- REFERANSLAR -->
+  <section class="sp-sec" id="referans">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Neler yaptık</span>
+        <h2 class="kol-h">Sözle değil, <em>oyunla</em></h2>
+        <p class="kol-lead">Yerle 1'in kendi oyunları; sipariş işlerine de aynı özen ve aynı ekip giriyor.</p>
+      </div>
+      <div class="sp-refs">
+        <a class="ref reveal" href="https://realyenal.itch.io/park-it" target="_blank" rel="noopener">
+          <img src="assets/parkit-kart.jpg" alt="Park It oyunundan bir kare" loading="lazy">
+          <div class="ref__body">
+            <span class="badge badge--live">Yayında</span>
+            <h3>Park It</h3>
+            <p>12 otoparklı park simülasyonu; tarayıcıda ücretsiz oynanır.</p>
+          </div>
+        </a>
+        <a class="ref reveal" href="index.html#koleksiyoner">
+          <img src="assets/kol/g_inceleme_k.jpg" alt="1:64 Koleksiyoner oyunundan bir kare" loading="lazy">
+          <div class="ref__body">
+            <span class="badge badge--wip">Steam · 2027</span>
+            <h3>1:64 Koleksiyoner</h3>
+            <p>İstanbul mahallesinde diecast koleksiyon ve al-sat oyunu.</p>
+          </div>
+        </a>
+        <a class="ref reveal" href="index.html#koleksiyoner">
+          <img src="assets/kol/g_atolye_k.jpg" alt="1:64 Koleksiyoner atölye ekranı" loading="lazy">
+          <div class="ref__body">
+            <span class="badge badge--done">Unity · C#</span>
+            <h3>Detayda ısrar</h3>
+            <p>Işık, malzeme, arayüz, ses: küçük bir oyunda bile bitmiş his.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEKLİF FORMU -->
+  <section class="sp-sec sp-sec--alt" id="teklif">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Teklif al</span>
+        <h2 class="kol-h">Hayalindeki oyunu <em>anlat</em></h2>
+        <p class="kol-lead">Bilmediğin soruları boş bırakabilirsin. Gönder'e bastığında talebin e-postana hazır hâlde açılır; tek yapman gereken göndermek.</p>
+      </div>
+
+      <div class="sp-form-wrap">
+        <form class="sp-form reveal" id="orderForm" novalidate>
+
+          <fieldset class="q">
+            <legend><b>1</b> Kim için?</legend>
+            <div class="opts" data-name="kim">
+              <label><input type="radio" name="kim" value="Kişisel / hediye"><span>🎁 Kişisel / hediye</span></label>
+              <label><input type="radio" name="kim" value="Marka / şirket / ajans"><span>🏢 Marka / şirket</span></label>
+              <label><input type="radio" name="kim" value="Girişim / kendi projem"><span>🚀 Kendi projem</span></label>
+              <label><input type="radio" name="kim" value="Instagram serisi (ücretsiz)"><span>📱 Instagram serisi</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><b>2</b> Oyunun adı ya da kısa fikri</legend>
+            <input type="text" name="baslik" class="form-input" maxlength="60" placeholder="Örn: Babamın Taksisi">
+            <textarea name="fikir" class="form-input form-ta" maxlength="1500" required placeholder="Oyunda ne oluyor? Oyuncu ne yapıyor, nerede geçiyor, kimin için? Kendi cümlelerinle anlat; kısa olması sorun değil."></textarea>
+            <small class="q__hint"><span id="fikirSay">0</span> / 1500 · Bu alan zorunlu.</small>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><b>3</b> Hangi pakete yakın?</legend>
+            <div class="opts" data-name="paket" id="paketOpts"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><b>4</b> Nerede oynanacak? <em>birden çok seçilebilir</em></legend>
+            <div class="opts opts--chips" data-name="platform">
+              <label><input type="checkbox" name="platform" value="Tarayıcı (bağlantıyla)"><span>Tarayıcı</span></label>
+              <label><input type="checkbox" name="platform" value="Telefon"><span>Telefon</span></label>
+              <label><input type="checkbox" name="platform" value="PC / Steam"><span>PC / Steam</span></label>
+              <label><input type="checkbox" name="platform" value="Etkinlik ekranı / stant"><span>Etkinlik ekranı</span></label>
+              <label><input type="checkbox" name="platform" value="Bilmiyorum"><span>Bilmiyorum</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><b>5</b> Nasıl bir oyun? <em>birden çok seçilebilir</em></legend>
+            <div class="opts opts--chips" data-name="tur">
+              <label><input type="checkbox" name="tur" value="Arcade / refleks"><span>Arcade</span></label>
+              <label><input type="checkbox" name="tur" value="Yarış / araba"><span>Yarış · araba</span></label>
+              <label><input type="checkbox" name="tur" value="Bulmaca"><span>Bulmaca</span></label>
+              <label><input type="checkbox" name="tur" value="Hikâye / macera"><span>Hikâye</span></label>
+              <label><input type="checkbox" name="tur" value="Simülasyon"><span>Simülasyon</span></label>
+              <label><input type="checkbox" name="tur" value="Bilgi yarışması / quiz"><span>Quiz</span></label>
+              <label><input type="checkbox" name="tur" value="Çok oyunculu"><span>Çok oyunculu</span></label>
+            </div>
+            <input type="text" name="ornek" class="form-input sp-mt" maxlength="160" placeholder="Benzediği oyunlar varsa (örn: Subway Surfers gibi ama…)">
+          </fieldset>
+
+          <div class="q-row">
+            <fieldset class="q">
+              <legend><b>6</b> Bütçe aralığı</legend>
+              <select name="butce" class="form-input">
+                <option value="">Seç (isteğe bağlı)</option>
+                <option>₺10.000'in altı</option>
+                <option>₺10.000 – 25.000</option>
+                <option>₺25.000 – 60.000</option>
+                <option>₺60.000 üstü</option>
+                <option>Henüz bilmiyorum</option>
+              </select>
+            </fieldset>
+            <fieldset class="q">
+              <legend><b>7</b> Ne zamana lazım?</legend>
+              <select name="zaman" class="form-input">
+                <option value="">Seç (isteğe bağlı)</option>
+                <option>2 hafta içinde</option>
+                <option>1 ay içinde</option>
+                <option>1–3 ay</option>
+                <option>Acelem yok</option>
+                <option>Belirli bir tarih var (açıklamada yazdım)</option>
+              </select>
+            </fieldset>
+          </div>
+
+          <fieldset class="q">
+            <legend><b>8</b> Sana nasıl ulaşalım?</legend>
+            <div class="form-row">
+              <input type="text" name="ad" class="form-input" maxlength="80" placeholder="Adın" required autocomplete="name">
+              <input type="email" name="eposta" class="form-input" maxlength="120" placeholder="E-posta" required autocomplete="email">
+            </div>
+            <input type="text" name="tel" class="form-input" maxlength="40" placeholder="Telefon ya da Instagram kullanıcı adı (isteğe bağlı)">
+          </fieldset>
+
+          <p class="sp-err" id="formErr" role="alert"></p>
+          <button type="submit" class="btn btn--primary btn--wide">Teklif İste →</button>
+          <p class="sp-privacy">Bilgilerin yalnız bu talep için kullanılır, kimseyle paylaşılmaz. Fikrin senindir; istersen görüşmeden önce gizlilik sözleşmesi imzalarız.</p>
+        </form>
+
+        <!-- Formla birlikte dolan fikir kartı -->
+        <aside class="sp-preview">
+          <div class="sp-preview__sticky">
+            <span class="sp-preview__label">Önizleme</span>
+            <div class="idea idea--live" id="ideaLive">
+              <div class="idea__top">
+                <span class="idea__tag" id="liveKim">Fikir kartı</span>
+                <span class="idea__num">#yeni</span>
+              </div>
+              <div class="idea__screen">
+                <div class="idea__road"></div>
+                <div class="idea__car"></div>
+                <div class="idea__star idea__star--1">★</div>
+                <div class="idea__star idea__star--2">★</div>
+                <div class="idea__star idea__star--3">★</div>
+              </div>
+              <h3 class="idea__title" id="liveTitle">Oyununun adı</h3>
+              <p class="idea__line" id="liveLine">Fikrini yazdıkça burada belirecek.</p>
+              <div class="idea__chips" id="liveChips"></div>
+              <div class="idea__foot" id="liveFoot"></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Gönderim sonrası -->
+      <div class="sp-done" id="done" hidden tabindex="-1">
+        <div class="sp-done__icon">✓</div>
+        <h3>Talebin hazır</h3>
+        <p>E-posta uygulaman açıldıysa yalnızca <b>Gönder</b>'e bas. Açılmadıysa aşağıdaki iki yoldan birini kullan:</p>
+        <div class="sp-done__btns">
+          <a class="btn btn--primary" id="gmailLink" target="_blank" rel="noopener">Gmail ile gönder</a>
+          <button class="btn btn--ghost" id="copyBtn" type="button">Metni kopyala</button>
+        </div>
+        <p class="sp-done__mail">Kopyaladıysan şu adrese yapıştırıp gönder: <a id="mailAddr"></a></p>
+        <pre class="sp-done__text" id="doneText"></pre>
+        <button class="sp-done__back" id="backBtn" type="button">← Formu düzenle</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SSS -->
+  <section class="sp-sec" id="sss">
+    <div class="container sp-faq-wrap">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Sık sorulanlar</span>
+        <h2 class="kol-h">Aklına <em>takılanlar</em></h2>
+      </div>
+      <div class="sp-faq" id="faq"></div>
+    </div>
+  </section>
+
+  <!-- SON ÇAĞRI -->
+  <section class="sp-final">
+    <div class="container sp-final__inner reveal">
+      <h2 class="kol-h">Fikrin bir cümle bile olsa <em>başlayabiliriz.</em></h2>
+      <a href="#teklif" class="btn btn--primary">Teklif Al →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/logo-mark.png" alt="Yerle 1" class="footer__logo">
+      <p>© 2026 Yerle 1 — Araba Temalı Oyun Stüdyosu</p>
+      <div class="footer__links">
+        <a href="index.html">Stüdyo</a>
+        <a href="#teklif">Teklif Al</a>
+        <a href="mailto:yenalkocer06006@gmail.com">Mail</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="siparis.js"></script>
+</body>
+</html>

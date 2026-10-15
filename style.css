@@ -1067,3 +1067,13 @@ html { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   .hero__bg img, .kol-ticker__track, .kol-fan__card--c { animation: none; }
 }
+
+/* Oyun siparişi tanıtım bandı (siparis.html'e götürür) */
+.order-band {
+  padding: 90px 0; background:
+    radial-gradient(ellipse 50% 80% at 90% 50%, rgba(230,57,43,0.18), transparent 70%), var(--bg-2);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.order-band__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.order-band__inner > div { max-width: 720px; }
+.contact__order { margin: -16px 0 32px; }

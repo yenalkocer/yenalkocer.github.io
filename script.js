@@ -386,14 +386,11 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 /* ==================== CONTACT FORM ==================== */
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const btn = this.querySelector('button[type=submit]');
-  btn.textContent = 'Gönderiliyor...';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = 'Mesaj Gönder →';
-    btn.disabled = false;
-    this.reset();
-    document.getElementById('formSuccess').classList.add('show');
-    setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 4000);
-  }, 1200);
+  const f = this.elements;
+  const subject = f.konu.value.trim() || `Yerle 1 sitesinden mesaj — ${f.ad.value.trim()}`;
+  const body = `${f.mesaj.value.trim()}
+
+${f.ad.value.trim()} · ${f.eposta.value.trim()}`;
+  window.location.href = `mailto:yenalkocer06006@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  document.getElementById('formSuccess').classList.add('show');
 });
