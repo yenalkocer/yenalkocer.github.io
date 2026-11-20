@@ -7,7 +7,7 @@ const FAQ = [
   ['Görüşmeler nasıl yapılıyor?',
    'Online, görüntülü görüşmeyle. Çoğu zaman ekranını paylaşırsın ve doğrudan senin projen üzerinde çalışırız.'],
   ['Ücreti ne kadar?',
-   'İlk tanışma görüşmesi ücretsiz. Sonrası görüşme sıklığına ve biçimine göre değişir; tanışmada açıkça konuşuruz.'],
+   'İlk görüşme 4.500 TL. Sonraki görüşmelerin ücreti sıklığa ve biçime göre değişir; bunu ilk görüşmede birlikte konuşup netleştiririz.'],
   ['Benim yerime oyunumu yapar mısın?',
    'Mentörlükte oyunu sen yaparsın, ben yol gösteririm. Oyunun baştan sona yapılmasını istiyorsan <a href="siparis.html">oyun siparişi</a> sayfasına bak.'],
   ['Sadece araba oyunları mı?',
