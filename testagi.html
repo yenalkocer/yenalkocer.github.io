@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Ağı — Yerle 1</title>
+  <meta name="description" content="Türk indie oyunları için test ağı: geliştirici oyununu gerçek oyunculara test ettirir ve ölçülmüş veri alır, oyuncu yerli oyunları herkesten önce oynar. İlk pilotlar Ocak 2027.">
+  <meta property="og:title" content="Yerle 1 Test Ağı — Oyununu gerçek oyuncular oynasın">
+  <meta property="og:description" content="Geliştiriciysen ücretsiz pilot testine başvur, oyuncuysan yerli oyunları herkesten önce oyna. Ön kayıt açık.">
+  <meta property="og:image" content="https://yenalkocer.github.io/assets/kol/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Barlow+Condensed:ital,wght@0,700;1,700;1,800&family=Barlow:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="siparis.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo"><img src="assets/logo-mark.png" alt="Yerle 1"></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#gelistirici" class="nav__link">Geliştirici</a></li>
+      <li><a href="#oyuncu" class="nav__link">Oyuncu</a></li>
+      <li><a href="#sss" class="nav__link">SSS</a></li>
+      <li><a href="index.html" class="nav__link">Stüdyo</a></li>
+      <li><a href="#kayit" class="nav__link sp-navcta">Ön Kayıt</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="sp-hero">
+    <div class="sp-hero__bg" aria-hidden="true"></div>
+    <div class="container sp-hero__grid">
+      <div class="sp-hero__text reveal">
+        <span class="kol-kicker">Yerle 1 · Test Ağı · Ön kayıt</span>
+        <h1 class="sp-hero__title">Oyununu gerçek<br><em>oyuncular oynasın.</em></h1>
+        <p class="sp-hero__sub">Kapalı test yaptık: 26 kişiyi davet ettik, 1 kişiden geri dönüş aldık. Küçük stüdyoların sorunu oyuncu bulmak değil; oynayıp geri dönen oyuncuyu bulmak. Test Ağı, Türk indie oyunlarını onları gerçekten oynayacak oyuncularla buluşturuyor ve geliştiriciye "güzel olmuş" yerine ölçülmüş veri veriyor.</p>
+        <div class="sp-hero__cta">
+          <a href="#kayit" class="btn btn--primary" data-rol-sec="gelistirici">Pilot Testine Başvur →</a>
+          <a href="#kayit" class="btn btn--ghost" data-rol-sec="oyuncu">Testçi Ol</a>
+        </div>
+        <ul class="sp-hero__proof">
+          <li><b>Ücretsiz</b><span>ilk pilotlar</span></li>
+          <li><b>Ocak 2027</b><span>ilk testler</span></li>
+          <li><b>Türkçe</b><span>oyuncu ve rapor</span></li>
+        </ul>
+      </div>
+
+      <div class="sp-hero__card reveal" aria-hidden="true">
+        <article class="who">
+          <div class="who__icon">📊</div>
+          <h3>Bir testin sonunda</h3>
+          <p>Geliştiricinin eline geçen rapor:</p>
+          <ul>
+            <li>Kaç oyuncu ilk 10 dakikayı geçti</li>
+            <li>Oyuncular hangi sahnede bıraktı</li>
+            <li>Oyun içi soruların puanları</li>
+            <li>Hata kayıtları ve ekran görüntüleri</li>
+            <li>Bu testten çıkan 3 karar</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <!-- KAYAN ŞERİT -->
+  <div class="kol-ticker" aria-hidden="true">
+    <div class="kol-ticker__track">
+      <span>Kapalı test</span><span>İlk 10 dakika</span><span>Unity</span><span>Steam Playtest</span><span>Next Fest demosu</span><span>Hata bildirimi</span><span>Türkçe rapor</span>
+      <span>Kapalı test</span><span>İlk 10 dakika</span><span>Unity</span><span>Steam Playtest</span><span>Next Fest demosu</span><span>Hata bildirimi</span><span>Türkçe rapor</span>
+    </div>
+  </div>
+
+  <!-- GELİŞTİRİCİ -->
+  <section class="sp-sec" id="gelistirici">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Geliştiriciysen</span>
+        <h2 class="kol-h">Tahmin ederek <em>cilalama</em></h2>
+        <p class="kol-lead">Demon Steam'e ya da Next Fest'e çıkmadan önce oyuncuların nerede sıkıldığını, nerede takıldığını gör.</p>
+      </div>
+      <ol class="kol-loop">
+        <li class="reveal"><b>01</b><h4>Başvur</h4><p>Oyununu ve neyi test etmek istediğini anlat: ilk 10 dakika mı, tek bir mekanik mi, tam demo mu?</p></li>
+        <li class="reveal"><b>02</b><h4>Paketi ekle</h4><p>Ücretsiz Unity paketi oyun içi olayları ve kısa soruları toplar. Yalnız test derlemesinde çalışır, mağaza sürümüne girmez.</p></li>
+        <li class="reveal"><b>03</b><h4>Oyuncular oynar</h4><p>Oyunun türünü seven oyuncular davet edilir. Dağıtım Steam Playtest ya da itch.io üzerinden yapılır.</p></li>
+        <li class="reveal"><b>04</b><h4>Raporu al</h4><p>Tamamlanma oranı, bırakma noktaları, puanlar ve yorumlar tek bir Türkçe raporda toplanır.</p></li>
+        <li class="reveal"><b>05</b><h4>İlk hayranların</h4><p>Testi beğenen oyuncuya istek listesine ekleme bağlantısı gösterilir. Testçilerin ilk hayranların olur.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- OYUNCU -->
+  <section class="sp-sec sp-sec--alt" id="oyuncu">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Oyuncuysan</span>
+        <h2 class="kol-h">Yerli oyunları <em>herkesten önce</em> oyna</h2>
+        <p class="kol-lead">Henüz çıkmamış Türk indie oyunlarını oyna, fikrini söyle, oyunun şeklini değiştir.</p>
+      </div>
+      <div class="sp-who">
+        <article class="who reveal">
+          <div class="who__icon">🎮</div>
+          <h3>Erken erişim</h3>
+          <p>Sevdiğin türdeki testlere davet al.</p>
+          <ul>
+            <li>Bir test genelde 30–60 dakika</li>
+            <li>Kabul etmek zorunda değilsin</li>
+            <li>PC (Steam veya itch.io)</li>
+          </ul>
+        </article>
+        <article class="who reveal">
+          <div class="who__icon">🏅</div>
+          <h3>Karşılığı</h3>
+          <p>Zamanın boşa gitmez.</p>
+          <ul>
+            <li>Oyunun jeneriğinde "Test edenler" listesinde adın</li>
+            <li>Testçi rozeti ve güven puanı</li>
+            <li>Geliştirici verirse, oyun çıkınca ücretsiz kopya</li>
+          </ul>
+        </article>
+        <article class="who reveal">
+          <div class="who__icon">🔒</div>
+          <h3>Gizlilik</h3>
+          <p>Oyunda toplanan veri sana bağlanmaz.</p>
+          <ul>
+            <li>Test paketi ad, e-posta, konum toplamaz</li>
+            <li>Yalnız 18 yaş ve üstü</li>
+            <li>İstediğin zaman kaydını sildirebilirsin</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- KAYIT FORMU -->
+  <section class="sp-sec" id="kayit">
+    <div class="container">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Ön kayıt</span>
+        <h2 class="kol-h">Sırana <em>yaz</em></h2>
+        <p class="kol-lead">İlk pilotlar Ocak 2027'de başlıyor. Gönder'e bastığında kaydın e-postana hazır hâlde açılır; tek yapman gereken göndermek.</p>
+      </div>
+
+      <div class="sp-form-wrap" style="grid-template-columns: 1fr; max-width: 760px; margin: 0 auto;">
+        <form class="sp-form reveal" id="kayitForm" novalidate>
+
+          <fieldset class="q">
+            <legend><b>1</b> Sen kimsin?</legend>
+            <div class="opts" data-name="rol">
+              <label><input type="radio" name="rol" value="gelistirici"><span>🛠️ Geliştiriciyim, oyunumu test ettirmek istiyorum</span></label>
+              <label><input type="radio" name="rol" value="oyuncu"><span>🎮 Oyuncuyum, test etmek istiyorum</span></label>
+            </div>
+          </fieldset>
+
+          <!-- Geliştirici soruları -->
+          <div data-rol="gelistirici" hidden>
+            <fieldset class="q">
+              <legend><b>2</b> Oyunun ve ekibin</legend>
+              <div class="form-row">
+                <input type="text" name="oyun" class="form-input" maxlength="80" placeholder="Oyunun adı">
+                <input type="text" name="ekip" class="form-input" maxlength="40" placeholder="Ekip kaç kişi?">
+              </div>
+              <input type="text" name="oyunLink" class="form-input" maxlength="200" placeholder="Steam, itch.io ya da tanıtım bağlantısı (isteğe bağlı)">
+            </fieldset>
+            <div class="q-row">
+              <fieldset class="q">
+                <legend><b>3</b> Motor</legend>
+                <select name="motor" class="form-input">
+                  <option value="">Seç</option>
+                  <option>Unity</option><option>Godot</option><option>Unreal</option><option>Diğer</option>
+                </select>
+              </fieldset>
+              <fieldset class="q">
+                <legend><b>4</b> Ne zaman test etmek istersin?</legend>
+                <select name="zaman" class="form-input">
+                  <option value="">Seç</option>
+                  <option>Ocak 2027</option><option>Şubat – Mart 2027</option><option>Daha sonra</option>
+                </select>
+              </fieldset>
+            </div>
+            <fieldset class="q">
+              <legend><b>5</b> Son testini nasıl yaptın? Kaç kişiye ulaştın, kaçı geri döndü?</legend>
+              <textarea name="sonTest" class="form-input form-ta" maxlength="1200" placeholder="Hiç yapmadıysan bunu da yazabilirsin. Senin deneyimin bu hizmeti şekillendirecek."></textarea>
+            </fieldset>
+          </div>
+
+          <!-- Oyuncu soruları -->
+          <div data-rol="oyuncu" hidden>
+            <fieldset class="q">
+              <legend><b>2</b> Hangi türleri seversin? <em>birden çok seçilebilir</em></legend>
+              <div class="opts opts--chips" data-name="tur">
+                <label><input type="checkbox" name="tur" value="Simülasyon"><span>Simülasyon</span></label>
+                <label><input type="checkbox" name="tur" value="Yarış / araba"><span>Yarış · araba</span></label>
+                <label><input type="checkbox" name="tur" value="Aksiyon"><span>Aksiyon</span></label>
+                <label><input type="checkbox" name="tur" value="Bulmaca"><span>Bulmaca</span></label>
+                <label><input type="checkbox" name="tur" value="Strateji / yönetim"><span>Strateji · yönetim</span></label>
+                <label><input type="checkbox" name="tur" value="Korku"><span>Korku</span></label>
+                <label><input type="checkbox" name="tur" value="Co-op / çok oyunculu"><span>Co-op</span></label>
+                <label><input type="checkbox" name="tur" value="Hikâye / macera"><span>Hikâye · macera</span></label>
+              </div>
+            </fieldset>
+            <div class="q-row">
+              <fieldset class="q">
+                <legend><b>3</b> Nerede oynuyorsun?</legend>
+                <select name="platform" class="form-input">
+                  <option value="">Seç</option>
+                  <option>Steam (PC)</option><option>itch.io (PC)</option><option>İkisi de</option>
+                </select>
+              </fieldset>
+              <fieldset class="q">
+                <legend><b>4</b> Ayda kaç test oynayabilirsin?</legend>
+                <select name="siklik" class="form-input">
+                  <option value="">Seç</option>
+                  <option>1</option><option>2 – 3</option><option>4 ve üstü</option>
+                </select>
+              </fieldset>
+            </div>
+            <fieldset class="q">
+              <legend><b>5</b> Yaş</legend>
+              <div class="opts opts--chips" data-name="yas">
+                <label><input type="checkbox" name="yas" value="evet"><span>✓ 18 yaşından büyüğüm</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <fieldset class="q" data-rol-ortak hidden>
+            <legend><b>✉</b> Sana nasıl ulaşalım?</legend>
+            <div class="form-row">
+              <input type="text" name="ad" class="form-input" maxlength="80" placeholder="Adın ya da kullanıcı adın" required autocomplete="name">
+              <input type="email" name="eposta" class="form-input" maxlength="120" placeholder="E-posta" required autocomplete="email">
+            </div>
+            <input type="text" name="discord" class="form-input" maxlength="60" placeholder="Discord kullanıcı adı (isteğe bağlı)">
+          </fieldset>
+
+          <p class="sp-err" id="formErr" role="alert"></p>
+          <button type="submit" class="btn btn--primary btn--wide" id="gonderBtn" hidden>Kaydı Gönder →</button>
+          <p class="sp-privacy">Bilgilerin yalnız Test Ağı ön kaydı için kullanılır, kimseyle paylaşılmaz. Kaydını sildirmek için e-posta atman yeterli.</p>
+        </form>
+      </div>
+
+      <!-- Gönderim sonrası -->
+      <div class="sp-done" id="done" hidden tabindex="-1">
+        <div class="sp-done__icon">✓</div>
+        <h3>Kaydın hazır</h3>
+        <p>E-posta uygulaman açıldıysa yalnızca <b>Gönder</b>'e bas. Açılmadıysa aşağıdaki iki yoldan birini kullan:</p>
+        <div class="sp-done__btns">
+          <a class="btn btn--primary" id="gmailLink" target="_blank" rel="noopener">Gmail ile gönder</a>
+          <button class="btn btn--ghost" id="copyBtn" type="button">Metni kopyala</button>
+        </div>
+        <p class="sp-done__mail">Kopyaladıysan şu adrese yapıştırıp gönder: <a id="mailAddr"></a></p>
+        <p class="sp-done__mail" id="discordSatir" hidden>Beklerken Discord sunucumuza katıl: <a id="discordLink" target="_blank" rel="noopener">Test Ağı Discord</a></p>
+        <pre class="sp-done__text" id="doneText"></pre>
+        <button class="sp-done__back" id="backBtn" type="button">← Formu düzenle</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SSS -->
+  <section class="sp-sec sp-sec--alt" id="sss">
+    <div class="container sp-faq-wrap">
+      <div class="kol-head reveal">
+        <span class="kol-strip">Sık sorulanlar</span>
+        <h2 class="kol-h">Aklına <em>takılanlar</em></h2>
+      </div>
+      <div class="sp-faq" id="faq"></div>
+    </div>
+  </section>
+
+  <!-- SON ÇAĞRI -->
+  <section class="sp-final">
+    <div class="container sp-final__inner reveal">
+      <h2 class="kol-h">Yirmi gerçek oyuncu, <em>yüz "güzel olmuş"tan iyidir.</em></h2>
+      <a href="#kayit" class="btn btn--primary">Ön Kayıt Ol →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/logo-mark.png" alt="Yerle 1" class="footer__logo">
+      <p>© 2026 Yerle 1 — Araba Temalı Oyun Stüdyosu</p>
+      <div class="footer__links">
+        <a href="index.html">Stüdyo</a>
+        <a href="siparis.html">Oyun Yaptır</a>
+        <a href="mentorluk.html">Mentörlük</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="testagi.js"></script>
+</body>
+</html>
